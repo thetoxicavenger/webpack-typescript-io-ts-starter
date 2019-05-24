@@ -28,6 +28,10 @@ function sum(numOne: number, numTwo: number): number {
     return numOne + numTwo
 }
 
+function doesNotReturn(): void {
+    console.log(5)
+}
+
 /* 
 
 Creating our own types
@@ -35,35 +39,41 @@ Creating our own types
 */
 
 // union types
+type strOrNum = string | number
+const instance: strOrNum = "true"
 
+// arrays
+type arrOfStrings = string[] | number[]
+const arrInst: string[] | number[] = [8]
 
-// simple functions
+// objects
+/*
 
-// complex functions (Below)
+{
+    firstName: string;
+    lastName: string;
+    age: number;
+}
 
+*/
 
+interface IUserInfo {
+    firstName: string;
+    lastName: string;
+    age: number;
+}
 
+const userInfo: IUserInfo = {
+    firstName: "Mitch",
+    lastName: "Cravens",
+    age: 28
+}
 
+// complex functions 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// fetchTodos('https://jsonplaceholder.typicode.com/todos/1')
-//     .then(handleTodos)
-//     .catch(handleError)
+fetchTodos('https://jsonplaceholder.typicode.com/todos/1')
+    .then(handleTodos)
+    .catch(handleError)
 
 type Todo = {
     completed: boolean;

@@ -1,8 +1,8 @@
 ## Outline
-* Configuration setup
-* What is Typescript?
-* Why is it useful?
-* Practical examples
+* What is Typescript? √
+* Why is it useful? √
+* Configuration setup √
+* Practical examples 
 
 ## Resources
 https://webpack.js.org/configuration
